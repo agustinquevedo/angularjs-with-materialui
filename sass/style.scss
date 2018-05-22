@@ -1,0 +1,37 @@
+@import "fonts";
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.md-button > p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.sidenav {
+    overflow: hidden;
+   .sidenav-button { 
+        padding: 6px 0;
+        margin: 6px 0;
+       p {  
+            white-space: normal;
+            line-height: 1;
+       }
+    }
+}
+
+.md-my-tabs {
+    .md-button {
+        margin: 0;
+        padding: 6px 8px;
+    }
+    .md-button.md-raised {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+

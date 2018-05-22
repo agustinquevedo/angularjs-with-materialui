@@ -1,0 +1,116 @@
+<md-card layout="row" ng-controller="modalController">
+    <div layout="row" flex="10" layout-align="start center">
+        <md-button class="md-fab md-mini md-accent" ng-click="showDialog($event)"><!-- Show Dialog Modal -->
+            <md-tooltip md-direction="right">Agregar Nuevo Grupo</md-tooltip><!-- Tooltip -->
+            <md-icon class="material-icons">add</md-icon>
+        </md-button>
+    </div>
+    <div layout="row" flex="90" layout-align="end center">
+        <md-button class="md-disabled" layout="column">
+            <i class="material-icons md-36">delete</i>
+            <p>Borrar</p>
+        </md-button>
+        <md-button class="md-disabled" layout="column">
+        <i class="material-icons md-36">get_app</i>
+            <p>Descargar</p>
+        </md-button>
+        <md-button class="md-disabled" layout="column">
+            <i class="material-icons md-36">visibility</i>
+            <p>Detalles</p>
+        </md-button>
+        <md-button class="md-disabled" layout="column">
+            <i class="material-icons md-36">create</i>
+            <p>Editar</p>
+        </md-button>
+        <md-button class="md-disabled" layout="column">
+            <i class="material-icons md-36">autorenew</i>
+            <p>Cambio de estado</p>
+        </md-button>
+    </div>
+</md-card>
+
+<md-card layout="row">
+    <div class="md-my-tabs" flex="20" layout="column" ng-model="mytabs" ng-init="mytabs = 'tab1'">
+        <md-button ng-class="{'md-accent md-raised':mytabs === 'tab1'}" ng-click="mytabs = 'tab1'">
+            TAB 1
+        </md-button>
+        <md-divider></md-divider>
+        <md-button ng-class="{'md-accent md-raised':mytabs === 'tab2'}" ng-click="mytabs = 'tab2'">
+            TAB 2
+        </md-button>
+        <md-divider></md-divider>
+        <md-button ng-class="{'md-accent md-raised':mytabs === 'tab3'}" ng-click="mytabs = 'tab3'">
+            TAB 3
+        </md-button>
+    </div>
+    <md-divider></md-divider>
+    <div flex="80" layout="column" ng-switch="mytabs">
+        <div class="md-padding" ng-switch-default>
+            CONTENIDO TAB 1
+        </div>
+        <div class="md-padding" ng-switch-when="tab2">
+            CONTENIDO TAB 2
+        </div>
+        <div class="md-padding" ng-switch-when="tab3">
+            CONTENIDO TAB 3
+        </div>
+    </div>
+</md-card>
+
+<!-- Dialog Modal -->
+<div style="visibility: hidden" layout-align="center">
+    <div class="md-dialog-container" id="myDialog" >
+        <md-dialog flex="90">
+            <md-toolbar class="md-primary">
+                <h3 class="md-toolbar-tools">Agregar Nuevo Grupo</h3>
+            </md-toolbar>
+            <div>
+                <div class="md-padding" layout="column" flex="100">
+                    <div class="md-warn" layout="row">
+                        <h4>Titulo</h4>
+                    </div>
+                    <div layout="row" style="font-size: 12px;border:1px solid rgba(0,0,0,0.12)">
+                        <div class="md-padding" layout-align="center center" flex="5">
+                            ID 2
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="10">
+                            ZONA 1
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="10">
+                           VIVIENDAS 2
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="10">
+                           INSCRIPTOS 2
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="15">
+                           GANADORES 4
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="15">
+                            SUPLENTES 0
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="15">
+                           CUBIERTOS 64 m2
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="15">
+                            PRECIO $1.293.285
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="md-padding" flex="10">
+                            SORTEO 1
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <md-dialog-action class="md-padding" layout="row" layout-align="end center">
+                <md-button class="md-accent md-raised" ng-click="closeDialog()">Agregar</md-button>
+            </md-dialog-action> -->
+        </md-dialog>
+    </div>
+</div>
